@@ -1,0 +1,116 @@
+
+body {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+.main {
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-radius: 50px; 
+    transform-origin:center;
+    animation: rotate 2s ease forwards infinite;
+}
+
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background: red;
+    /* border-radius: 50px;  */
+    clip-path: circle(6px);
+    display: grid;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+}
+
+.circle:nth-child(1) {
+    left: -100px;
+    animation: slideleft 2s ease forwards infinite;
+}
+
+.circle:nth-child(2) {
+    left: 100px;
+    top: -40px;
+    animation: slideright 2s ease forwards infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        background-color: coral;
+    }
+    25% {
+        background-color: yellowgreen;
+    }
+    50% {
+        transform: rotate(0deg);
+        background-color: darkblue;
+    }
+    100% {
+        transform: rotate(360deg);
+        background-color: darkorchid;
+    }
+}
+
+@keyframes slideleft {
+    0% {
+        transform: translateX(0px);
+        background-color: coral;
+    }
+    25% {
+        transform: translateX(-100px);
+        background-color: yellowgreen;
+    }
+    50% {
+        transform: translateX(0px);
+        background-color: darkblue;
+    }
+    100% {
+        background-color: darkorchid;
+    }
+}
+
+@keyframes slideright {
+    0% {
+        transform: translateX(0px);
+        background-color: coral;
+    }
+    
+    25% {
+        transform: translateX(100px);
+        background-color: yellowgreen;
+    }
+    50% {
+        transform: translateX(0px);
+        background-color: darkblue;
+    }
+    100% {
+        background-color: darkorchid;
+    }
+}
+
+p {
+    color: red;
+    animation: paragraph 2s ease forwards infinite;
+}
+
+@keyframes paragraph {
+    0% {
+        color: white;
+    }
+    50% {
+        color: yellowgreen;
+    }
+    75% {
+        color: darkorchid;
+    }
+    100% {
+        color: green; transform: rotate(5000deg); 
+    }
+}
